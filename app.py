@@ -22,11 +22,11 @@ def create_db():
         try:
             cursor.execute('''
             CREATE TABLE IF NOT EXISTS Basketball(
-                First varchar(255),
-                Last varchar(255),
-                City varchar(255),
-                Name varchar(255),
-                Number int
+                First VARCHAR(255),
+                Last VARCHAR(255),
+                City VARCHAR(255),
+                Name VARCHAR(255),
+                Number INT
                 );
                 ''')
             conn.commit()
