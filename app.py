@@ -53,9 +53,9 @@ def inserting():
                        VALUES
                        ('Jason', 'Tatum', 'Boston', 'Celtics', 0),
                        ('Stephen', 'Curry', 'San Francisco', 'Warriors', 30),
-                       ('Nikola', 'Jokic', 'Denver' 'Nuggets', 15),
+                       ('Nikola', 'Jokic', 'Denver', 'Nuggets', 15),
                        ('Kawhi', 'Leonard', 'Los Angeles', 'Clippers', 2),
-                       ('Tristan', 'Martinez', 'CU Boulder', 3308);
+                       ('Tristan', 'Martinez', 'CU Boulder','Buffs', 3308);
                        
                        ''')
         conn.commit()
