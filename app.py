@@ -16,7 +16,7 @@ def connect():
 
 @app.route('/db_create')
 def create_db():
-    #use with block so no need to close connection each time
+    
     conn = psycopg2.connect('postgresql://tmar_postgres_user:CB9YlJtgM8sN2OUiaWldcOAAk5si3oC7@dpg-d47d0sq4d50c73835go0-a/tmar_postgres')
     cursor = conn.connect()
     try:
