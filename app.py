@@ -10,9 +10,14 @@ def hello_world():
 
 @app.route('/db_test')
 def connect():
-    conn = psycopg2.connect('postgresql://tmar_postgres_user:CB9YlJtgM8sN2OUiaWldcOAAk5si3oC7@dpg-d47d0sq4d50c73835go0-a/tmar_postgres')
-    conn.close()
-    return 'Database Connection Successful'
+    try:
+        conn = psycopg2.connect('postgresql://tmar_postgres_user:CB9YlJtgM8sN2OUiaWldcOAAk5si3oC7@dpg-d47d0sq4d50c73835go0-a/tmar_postgres')
+        return 'Database Connection Successful'
+    except psycopg2.Error:
+        return "connection unsuccessful"
+    finally:
+        conn.close()
+    
 
 @app.route('/db_create')
 def create_db():
