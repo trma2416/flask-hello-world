@@ -23,7 +23,7 @@ def connect():
 def create_db():
     
     conn = psycopg2.connect('postgresql://tmar_postgres_user:CB9YlJtgM8sN2OUiaWldcOAAk5si3oC7@dpg-d47d0sq4d50c73835go0-a/tmar_postgres')
-    cursor = conn.connect()
+    cursor = conn.cursor()
     try:
         cursor.execute('''
             CREATE TABLE IF NOT EXISTS Basketball(
